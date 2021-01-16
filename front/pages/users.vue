@@ -48,12 +48,13 @@ export default {
       users: []
     }
   },
-  created() {
+  mounted() {
     // ユーザーをaxiosで取得
     axios.get("/users").then(res => {
       if (res.data) {
-          this.users = res.data
+          this.users = res.data;
           }
+      
         })
   },
   methods: {
